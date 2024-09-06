@@ -7,12 +7,8 @@ $(document).ready(function(){
     let totalPages = 0;
 
     function postsLoad(page){
-    let filePath = window.location.pathname;
-    console.log(filePath);
-
-
     //마크다운 파일 목록 가져오기 getJSON
-    $.getJSON('posts/posts.list.json', function(data){
+    $.getJSON('https://github.com/musecom2/musecom2.github.io/tree/main/posts/posts.list.json', function(data){
 
         totalPosts = data.posts.length;
         totalPages = Math.ceil(totalPosts / postsPerPage);
