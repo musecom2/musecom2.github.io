@@ -7,6 +7,9 @@ $(document).ready(function(){
     let totalPages = 0;
 
     function postsLoad(page){
+    let filePath = window.location.pathname;
+    console.log(filePath);
+
 
     //마크다운 파일 목록 가져오기 getJSON
     $.getJSON('posts/posts.list.json', function(data){
