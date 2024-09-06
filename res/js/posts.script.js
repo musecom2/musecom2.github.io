@@ -20,7 +20,7 @@ $(document).ready(function(){
 
         //각각의 포스트를 가져와서 표시
         $.each(postsToShow, function(index, file){
-          file = `https://github.com/musecom2/musecom2.github.io/tree/main/posts/${file}`;
+          file = `https://github.com/musecom2/musecom2.github.io/blob/main/posts/${file}`;
           $.get(file, function(text){
               const { meta, content } = parseMarkDown(text);
               //console.log(meta);
