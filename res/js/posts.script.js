@@ -8,7 +8,7 @@ $(document).ready(function(){
 
     function postsLoad(page){
     //마크다운 파일 목록 가져오기 getJSON
-    $.getJSON('_posts/posts.list.json', function(data){
+    $.getJSON('posts/posts.list.json', function(data){
 
         totalPosts = data.posts.length;
         totalPages = Math.ceil(totalPosts / postsPerPage);
@@ -20,7 +20,7 @@ $(document).ready(function(){
 
         //각각의 포스트를 가져와서 표시
         $.each(postsToShow, function(index, file){
-          file = `_posts/${file}`;
+          file = `posts/${file}`;
           $.get(file, function(text){
               const { meta, content } = parseMarkDown(text);
               //console.log(meta);
